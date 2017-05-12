@@ -4,7 +4,7 @@ object frmNewForm: TfrmNewForm
   AutoScroll = False
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Cifrado de Cesar'
-  ClientHeight = 326
+  ClientHeight = 344
   ClientWidth = 422
   Color = clAppWorkSpace
   OldCreateOrder = True
@@ -32,16 +32,16 @@ object frmNewForm: TfrmNewForm
   PixelsPerInch = 96
   TextHeight = 15
   object WxEdit1: TWxEdit
-    Left = 19
-    Top = 156
-    Width = 132
-    Height = 27
+    Left = 1
+    Top = 132
+    Width = 252
+    Height = 22
     BevelInner = bvNone
     BevelOuter = bvNone
     AutoSize = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
+    Font.Height = -15
     Font.Name = 'Calisto MT'
     Font.Style = []
     ParentFont = False
@@ -74,20 +74,21 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object WxEdit2: TWxEdit
-    Left = 254
-    Top = 155
-    Width = 132
-    Height = 27
+    Left = 2
+    Top = 200
+    Width = 252
+    Height = 21
     BevelInner = bvNone
     BevelOuter = bvNone
     AutoSize = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
+    Font.Height = -15
     Font.Name = 'Calisto MT'
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    EVT_TEXT = 'WxEdit2Updated'
     Wx_BGColor = clBlack
     Wx_Class = 'wxTextCtrl'
     Wx_ControlOrientation = wxControlVertical
@@ -116,10 +117,10 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object WxButton1: TWxButton
-    Left = 165
-    Top = 153
-    Width = 75
-    Height = 34
+    Left = 5
+    Top = 162
+    Width = 100
+    Height = 26
     Caption = 'Cifrar'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -128,6 +129,7 @@ object frmNewForm: TfrmNewForm
     Font.Style = []
     ParentFont = False
     TabOrder = 2
+    EVT_BUTTON = 'WxButton1Click'
     Wx_BKColor = clBlack
     Wx_ButtonStyle = []
     Wx_Class = 'wxButton'
@@ -159,15 +161,15 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object WxStaticText1: TWxStaticText
-    Left = 20
-    Top = 123
-    Width = 142
-    Height = 24
-    Caption = 'Inroduce el texto a cifrar :'
+    Left = 3
+    Top = 107
+    Width = 163
+    Height = 21
+    Caption = 'Introduzca su mensaje :'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
-    Font.Name = 'Arial Narrow'
+    Font.Name = 'Arial'
     Font.Style = []
     ParentFont = False
     TabOrder = 3
@@ -197,30 +199,302 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_X_Pos = 0
     Wx_Floating_Y_Pos = 0
   end
-  object WxStaticText2: TWxStaticText
-    Left = 282
-    Top = 125
-    Width = 85
+  object WxButton2: TWxButton
+    Left = 2
+    Top = 8
+    Width = 75
     Height = 24
-    Caption = 'Texto Cifrado :'
+    Caption = 'Nuevo'
+    TabOrder = 4
+    Wx_BKColor = clBlack
+    Wx_ButtonStyle = []
+    Wx_Class = 'wxButton'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_Default = False
+    Wx_EventList.Strings = (
+      'EVT_BUTTON:OnClick'
+      'EVT_UPDATE_UI:OnUpdateUI')
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_WXBUTTON2'
+    Wx_IDValue = 1006
+    Wx_PaneCaption = 'WxButton2'
+    Wx_PaneName = 'WxButton2_Pane'
+    Wx_Aui_Dock_Direction = wxAUI_DOCK_NONE
+    Wx_Aui_Dockable_Direction = []
+    Wx_Aui_Pane_Style = []
+    Wx_Aui_Pane_Buttons = []
+    Wx_BestSize_Height = 0
+    Wx_BestSize_Width = 0
+    Wx_MinSize_Height = 0
+    Wx_MinSize_Width = 0
+    Wx_MaxSize_Height = 0
+    Wx_MaxSize_Width = 0
+    Wx_Floating_Height = 0
+    Wx_Floating_Width = 0
+    Wx_Floating_X_Pos = 0
+    Wx_Floating_Y_Pos = 0
+  end
+  object WxButton3: TWxButton
+    Left = 66
+    Top = -88
+    Width = 75
+    Height = 25
+    Caption = 'WxButton3'
+    TabOrder = 5
+    Wx_BKColor = clBlack
+    Wx_ButtonStyle = []
+    Wx_Class = 'wxButton'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_Default = False
+    Wx_EventList.Strings = (
+      'EVT_BUTTON:OnClick'
+      'EVT_UPDATE_UI:OnUpdateUI')
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_WXBUTTON3'
+    Wx_IDValue = 1007
+    Wx_PaneCaption = 'WxButton3'
+    Wx_PaneName = 'WxButton3_Pane'
+    Wx_Aui_Dock_Direction = wxAUI_DOCK_NONE
+    Wx_Aui_Dockable_Direction = []
+    Wx_Aui_Pane_Style = []
+    Wx_Aui_Pane_Buttons = []
+    Wx_BestSize_Height = 0
+    Wx_BestSize_Width = 0
+    Wx_MinSize_Height = 0
+    Wx_MinSize_Width = 0
+    Wx_MaxSize_Height = 0
+    Wx_MaxSize_Width = 0
+    Wx_Floating_Height = 0
+    Wx_Floating_Width = 0
+    Wx_Floating_X_Pos = 0
+    Wx_Floating_Y_Pos = 0
+  end
+  object WxButton4: TWxButton
+    Left = 79
+    Top = 7
+    Width = 75
+    Height = 25
+    Caption = 'Limpiar'
+    TabOrder = 6
+    EVT_BUTTON = 'WxButton4Click'
+    Wx_BKColor = clBlack
+    Wx_ButtonStyle = []
+    Wx_Class = 'wxButton'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_Default = False
+    Wx_EventList.Strings = (
+      'EVT_BUTTON:OnClick'
+      'EVT_UPDATE_UI:OnUpdateUI')
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_WXBUTTON4'
+    Wx_IDValue = 1008
+    Wx_PaneCaption = 'WxButton4'
+    Wx_PaneName = 'WxButton4_Pane'
+    Wx_Aui_Dock_Direction = wxAUI_DOCK_NONE
+    Wx_Aui_Dockable_Direction = []
+    Wx_Aui_Pane_Style = []
+    Wx_Aui_Pane_Buttons = []
+    Wx_BestSize_Height = 0
+    Wx_BestSize_Width = 0
+    Wx_MinSize_Height = 0
+    Wx_MinSize_Width = 0
+    Wx_MaxSize_Height = 0
+    Wx_MaxSize_Width = 0
+    Wx_Floating_Height = 0
+    Wx_Floating_Width = 0
+    Wx_Floating_X_Pos = 0
+    Wx_Floating_Y_Pos = 0
+  end
+  object WxButton5: TWxButton
+    Left = 158
+    Top = 7
+    Width = 75
+    Height = 25
+    Caption = 'Guardar'
+    TabOrder = 7
+    Wx_BKColor = clBlack
+    Wx_ButtonStyle = []
+    Wx_Class = 'wxButton'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_Default = False
+    Wx_EventList.Strings = (
+      'EVT_BUTTON:OnClick'
+      'EVT_UPDATE_UI:OnUpdateUI')
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_WXBUTTON5'
+    Wx_IDValue = 1009
+    Wx_PaneCaption = 'WxButton5'
+    Wx_PaneName = 'WxButton5_Pane'
+    Wx_Aui_Dock_Direction = wxAUI_DOCK_NONE
+    Wx_Aui_Dockable_Direction = []
+    Wx_Aui_Pane_Style = []
+    Wx_Aui_Pane_Buttons = []
+    Wx_BestSize_Height = 0
+    Wx_BestSize_Width = 0
+    Wx_MinSize_Height = 0
+    Wx_MinSize_Width = 0
+    Wx_MaxSize_Height = 0
+    Wx_MaxSize_Width = 0
+    Wx_Floating_Height = 0
+    Wx_Floating_Width = 0
+    Wx_Floating_X_Pos = 0
+    Wx_Floating_Y_Pos = 0
+  end
+  object WxEdit3: TWxEdit
+    Left = 2
+    Top = 77
+    Width = 182
+    Height = 19
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    AutoSize = False
+    TabOrder = 8
+    EVT_TEXT = 'WxEdit3Updated'
+    Wx_BGColor = clBlack
+    Wx_Class = 'wxTextCtrl'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_EditStyle = []
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_WXEDIT3'
+    Wx_IDValue = 1010
+    Wx_MaxLength = 0
+    Wx_PaneCaption = 'WxEdit3'
+    Wx_PaneName = 'WxEdit3_Pane'
+    Wx_Aui_Dock_Direction = wxAUI_DOCK_NONE
+    Wx_Aui_Dockable_Direction = []
+    Wx_Aui_Pane_Style = []
+    Wx_Aui_Pane_Buttons = []
+    Wx_BestSize_Height = 0
+    Wx_BestSize_Width = 0
+    Wx_MinSize_Height = 0
+    Wx_MinSize_Width = 0
+    Wx_MaxSize_Height = 0
+    Wx_MaxSize_Width = 0
+    Wx_Floating_Height = 0
+    Wx_Floating_Width = 0
+    Wx_Floating_X_Pos = 0
+    Wx_Floating_Y_Pos = 0
+  end
+  object WxStaticText3: TWxStaticText
+    Left = 2
+    Top = 50
+    Width = 273
+    Height = 21
+    Caption = 'Introduce el numero de dezplazamiento :'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
-    Font.Name = 'Arial Narrow'
+    Font.Name = 'Arial'
     Font.Style = []
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 9
     Wx_BGColor = clBlack
     Wx_Class = 'wxStaticText'
     Wx_ControlOrientation = wxControlVertical
     Wx_FGColor = clBlack
     Wx_GeneralStyle = []
     Wx_Hidden = False
-    Wx_IDName = 'ID_WXSTATICTEXT2'
-    Wx_IDValue = 1005
+    Wx_IDName = 'ID_WXSTATICTEXT3'
+    Wx_IDValue = 1011
     Wx_LabelStyle = []
-    Wx_PaneCaption = 'WxStaticText2'
-    Wx_PaneName = 'WxStaticText2_Pane'
+    Wx_PaneCaption = 'WxStaticText3'
+    Wx_PaneName = 'WxStaticText3_Pane'
+    Wx_Aui_Dock_Direction = wxAUI_DOCK_NONE
+    Wx_Aui_Dockable_Direction = []
+    Wx_Aui_Pane_Style = []
+    Wx_Aui_Pane_Buttons = []
+    Wx_BestSize_Height = 0
+    Wx_BestSize_Width = 0
+    Wx_MinSize_Height = 0
+    Wx_MinSize_Width = 0
+    Wx_MaxSize_Height = 0
+    Wx_MaxSize_Width = 0
+    Wx_Floating_Height = 0
+    Wx_Floating_Width = 0
+    Wx_Floating_X_Pos = 0
+    Wx_Floating_Y_Pos = 0
+  end
+  object WxButton6: TWxButton
+    Left = 6
+    Top = 234
+    Width = 91
+    Height = 26
+    Caption = 'Descifrar'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Calisto MT'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 10
+    Wx_BKColor = clBlack
+    Wx_ButtonStyle = []
+    Wx_Class = 'wxButton'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_Default = False
+    Wx_EventList.Strings = (
+      'EVT_BUTTON:OnClick'
+      'EVT_UPDATE_UI:OnUpdateUI')
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_WXBUTTON6'
+    Wx_IDValue = 1012
+    Wx_PaneCaption = 'WxButton6'
+    Wx_PaneName = 'WxButton6_Pane'
+    Wx_Aui_Dock_Direction = wxAUI_DOCK_NONE
+    Wx_Aui_Dockable_Direction = []
+    Wx_Aui_Pane_Style = []
+    Wx_Aui_Pane_Buttons = []
+    Wx_BestSize_Height = 0
+    Wx_BestSize_Width = 0
+    Wx_MinSize_Height = 0
+    Wx_MinSize_Width = 0
+    Wx_MaxSize_Height = 0
+    Wx_MaxSize_Width = 0
+    Wx_Floating_Height = 0
+    Wx_Floating_Width = 0
+    Wx_Floating_X_Pos = 0
+    Wx_Floating_Y_Pos = 0
+  end
+  object WxEdit4: TWxEdit
+    Left = 3
+    Top = 270
+    Width = 248
+    Height = 21
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    AutoSize = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Calisto MT'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 11
+    EVT_TEXT = 'WxEdit2Updated'
+    Wx_BGColor = clBlack
+    Wx_Class = 'wxTextCtrl'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_EditStyle = []
+    Wx_FGColor = clBlack
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_IDName = 'ID_WXEDIT4'
+    Wx_IDValue = 1014
+    Wx_MaxLength = 0
+    Wx_PaneCaption = 'WxEdit2'
+    Wx_PaneName = 'WxEdit2_Pane'
     Wx_Aui_Dock_Direction = wxAUI_DOCK_NONE
     Wx_Aui_Dockable_Direction = []
     Wx_Aui_Pane_Style = []

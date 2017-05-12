@@ -29,7 +29,8 @@
 #include <wx/stattext.h>
 #include <wx/button.h>
 #include <wx/textctrl.h>
-////Header Include End
+#include <wx/string.h>
+
 
 ////Dialog Style Start
 #undef CifradoCesarGraficoFrm_STYLE
@@ -44,17 +45,30 @@ class CifradoCesarGraficoFrm : public wxFrame
 	public:
 		CifradoCesarGraficoFrm(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("Cifrado de Cesar"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = CifradoCesarGraficoFrm_STYLE);
 		virtual ~CifradoCesarGraficoFrm();
+		void WxBitmapButton1Click(wxCommandEvent& event);
+		void WxButton4Click(wxCommandEvent& event);
+		void WxButton1Click(wxCommandEvent& event);
+		void WxEdit2Updated(wxCommandEvent& event);
+		void WxEdit3Updated(wxCommandEvent& event);
 		
 	private:
 		//Do not add custom control declarations between
 		//GUI Control Declaration Start and GUI Control Declaration End.
 		//wxDev-C++ will remove them. Add custom code after the block.
 		////GUI Control Declaration Start
-		wxStaticText *WxStaticText2;
+		wxTextCtrl *WxEdit4;
+		wxButton *WxButton6;
+		wxStaticText *WxStaticText3;
+		wxTextCtrl *WxEdit3;
+		wxButton *WxButton5;
+		wxButton *WxButton4;
+		wxButton *WxButton3;
+		wxButton *WxButton2;
 		wxStaticText *WxStaticText1;
 		wxButton *WxButton1;
 		wxTextCtrl *WxEdit2;
 		wxTextCtrl *WxEdit1;
+		
 		////GUI Control Declaration End
 		
 	private:
@@ -65,7 +79,14 @@ class CifradoCesarGraficoFrm : public wxFrame
 		enum
 		{
 			////GUI Enum Control ID Start
-			ID_WXSTATICTEXT2 = 1005,
+			ID_WXEDIT4 = 1014,
+			ID_WXBUTTON6 = 1012,
+			ID_WXSTATICTEXT3 = 1011,
+			ID_WXEDIT3 = 1010,
+			ID_WXBUTTON5 = 1009,
+			ID_WXBUTTON4 = 1008,
+			ID_WXBUTTON3 = 1007,
+			ID_WXBUTTON2 = 1006,
 			ID_WXSTATICTEXT1 = 1004,
 			ID_WXBUTTON1 = 1003,
 			ID_WXEDIT2 = 1002,
