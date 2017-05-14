@@ -1,19 +1,19 @@
-# Project: CifradoCesarGrafico
+# Project: Proyecto1
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 12/05/17 18:13
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 13/05/17 23:30
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
 CC        = gcc.exe
 WINDRES   = "windres.exe"
-OBJ       = Objects/MingW/CifradoCesarGraficoApp.o Objects/MingW/CifradoCesarGraficoFrm.o Objects/MingW/CifradoCesarGrafico_private.res
-LINKOBJ   = "Objects/MingW/CifradoCesarGraficoApp.o" "Objects/MingW/CifradoCesarGraficoFrm.o" Objects/MingW/CifradoCesarGrafico_private.res
+OBJ       = Objects/MingW/Proyecto1App.o Objects/MingW/CesarGrafico.o Objects/MingW/Proyecto1_private.res
+LINKOBJ   = "Objects/MingW/Proyecto1App.o" "Objects/MingW/CesarGrafico.o" Objects/MingW/Proyecto1_private.res
 LIBS      = -L"C:/Program Files/Dev-Cpp/lib/wx/gcc_lib" -L"C:/Program Files/Dev-Cpp/lib" -L"C:/Program Files/Dev-Cpp/MinGW32/lib" -mwindows -l$(WXLIBNAME) -l$(WXLIBNAME)_gl -lwxscintilla -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32  
 INCS      = -I"C:/Program Files/Dev-Cpp/MinGW32/include"
 CXXINCS   = -I"C:/Program Files/Dev-Cpp/MinGW32/include" -I"C:/Program Files/Dev-Cpp/" -I"C:/Program Files/Dev-Cpp/include/common"
 RCINCS    = --include-dir "C:/PROGRA~1/Dev-Cpp/include/common"
-BIN       = Output/MingW/CifradoCesarGrafico.exe
+BIN       = Output/MingW/Proyecto1.exe
 DEFINES   = -D__WXMSW__ -D__GNUWIN32__ -D_UNICODE
 CXXFLAGS  = $(CXXINCS) $(DEFINES)  
 CFLAGS    = $(INCS) $(DEFINES)  
@@ -36,11 +36,11 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
 
-Objects/MingW/CifradoCesarGraficoApp.o: $(GLOBALDEPS) CifradoCesarGraficoApp.cpp CifradoCesarGraficoApp.h CifradoCesarGraficoFrm.h
-	$(CPP) -c CifradoCesarGraficoApp.cpp -o Objects/MingW/CifradoCesarGraficoApp.o $(CXXFLAGS)
+Objects/MingW/Proyecto1App.o: $(GLOBALDEPS) Proyecto1App.cpp Proyecto1App.h CesarGrafico.h
+	$(CPP) -c Proyecto1App.cpp -o Objects/MingW/Proyecto1App.o $(CXXFLAGS)
 
-Objects/MingW/CifradoCesarGraficoFrm.o: $(GLOBALDEPS) CifradoCesarGraficoFrm.cpp CifradoCesarGraficoFrm.h
-	$(CPP) -c CifradoCesarGraficoFrm.cpp -o Objects/MingW/CifradoCesarGraficoFrm.o $(CXXFLAGS)
+Objects/MingW/CesarGrafico.o: $(GLOBALDEPS) CesarGrafico.cpp CesarGrafico.h
+	$(CPP) -c CesarGrafico.cpp -o Objects/MingW/CesarGrafico.o $(CXXFLAGS)
 
-Objects/MingW/CifradoCesarGrafico_private.res: Objects/MingW/CifradoCesarGrafico_private.rc CifradoCesarGraficoApp.rc 
-	$(WINDRES) --input-format=rc -o Objects/MingW/CifradoCesarGrafico_private.res $(RCINCS) Objects/MingW/CIFRAD~1.RC -O coff
+Objects/MingW/Proyecto1_private.res: Objects/MingW/Proyecto1_private.rc Proyecto1App.rc 
+	$(WINDRES) --input-format=rc -o Objects/MingW/Proyecto1_private.res $(RCINCS) Objects/MingW/PROYEC~1.RC -O coff
